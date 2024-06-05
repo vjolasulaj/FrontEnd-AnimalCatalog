@@ -1,0 +1,37 @@
+.gallery-layout{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.radio-container input{
+    margin-right: 10px;
+}
+
+.radio-container label{
+    font-weight: 600;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+.c-container h3{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+

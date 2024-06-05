@@ -1,0 +1,31 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+}
+
+.contact-container{
+    width: 550px;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts h2, p{
+    color:rgb(68, 35, 35);
+}
+
+.contacts .contact-input{
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid rgb(68, 35, 35);
+}
+
+.contact img{
+    object-fit: contain;
+}

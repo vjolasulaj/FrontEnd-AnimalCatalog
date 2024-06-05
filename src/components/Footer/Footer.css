@@ -1,0 +1,44 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(216, 199, 152);
+    gap: 10px;
+    padding: 20px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.links-row {
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+}
+
+.links h3 {
+    color: rgb(68, 35, 35);
+}
+
+.links li {
+    list-style: none;
+    color: rgb(97, 47, 47);
+    font-size: 14px;
+    transition: all .42s ease;
+}
+
+.links li:hover{
+    color: rgb(131, 106, 106);
+}
+
+.footer hr {
+    border: none;
+    border-bottom: 1px solid rgb(110, 56, 56);
+}
+
+.bottom-links {
+    text-align: center;
+    font-size: 13px;
+    color: rgb(68, 35, 35);
+}

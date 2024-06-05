@@ -1,0 +1,72 @@
+.admin-layout{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.add-action{
+    margin-bottom: 30px;
+}
+.add-action button{
+    margin-bottom: 0px;
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+table th, table td{
+    border: 2px solid rgba(110, 43, 43, 0.74);
+    padding: 4px;
+    text-align: center;
+
+}
+
+dialog{
+    margin: auto;
+    padding: 20px;
+    width: 500px;
+    border: none;
+    border-radius: 30px;
+}
+
+  dialog::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  dialog::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  dialog::-webkit-scrollbar-thumb {
+    background-color: #999999;
+    border-radius: 30px;
+    border: 0px inset #ffffff;
+  }
+
+.modal-buttons{
+    margin-top: 10px;
+}
+
+.modal-buttons button{
+    margin-right: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input{
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid rgb(68, 35, 35);
+}
+
+.actions button{
+    padding: 10px 12px;
+    margin: 10px;
+}

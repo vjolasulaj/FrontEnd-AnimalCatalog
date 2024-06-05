@@ -1,0 +1,46 @@
+.navbar{
+    padding: 0px 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.image img{
+    width: 120px;
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: rgb(41, 6, 6);
+    font-weight: 500;
+    font-size: 19px;
+}
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgba(110, 43, 43, 0.74);
+}
+
+.navbar li{
+    cursor: pointer;
+    transition: all .42s ease;
+}
+
+.navbar.active::after{
+    width: 0;
+    height: 2px;
+    background: rgba(110, 43, 43, 0.74);
+    transition: width .3s;
+}
+
+.navbar.active:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+.navbar li:hover{
+    color: rgb(167, 135, 135);
+}
+
+

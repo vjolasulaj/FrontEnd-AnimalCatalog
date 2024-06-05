@@ -1,0 +1,19 @@
+.searchbar{
+    display: inline-block;
+    position: relative;
+}
+
+.searchbar input{
+    padding: 8px 10px;
+    border-radius:50px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.searchbar img{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform: translateY(50%);
+    cursor: pointer;
+}
