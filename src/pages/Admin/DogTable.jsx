@@ -21,7 +21,7 @@ const DogTable = () => {
   }, [openModal]);
 
   useEffect(() => {
-    let url = "http://localhost:3000/dogs";
+    let url = `${process.env.BACKEND_URL}/dogs`;
 
     fetch(url, {
       method: "GET",
@@ -126,7 +126,7 @@ const DogTable = () => {
                   const createAnimal = async () => {
                     try {
                       const response = await fetch(
-                        "http://localhost:3000/dogs",
+                        `${process.env.BACKEND_URL}/dogs`,
                         {
                           method: "POST",
                           headers: {
@@ -142,7 +142,7 @@ const DogTable = () => {
 
                       const data = await response.json();
                       let url = "";
-                      url = "http://localhost:3000/dogs";
+                      url = `${process.env.BACKEND_URL}/dogs`;
 
                       fetch(url, {
                         method: "GET",
@@ -154,7 +154,7 @@ const DogTable = () => {
                   const updateAnimal = async () => {
                     try {
                       const response = await fetch(
-                        "http://localhost:3000/dogs/" + selectedId,
+                        `${process.env.BACKEND_URL}/dogs` + selectedId,
                         {
                           method: "PATCH",
                           headers: {
@@ -170,7 +170,7 @@ const DogTable = () => {
 
                       const data = await response.json();
                       let url = "";
-                      url = "http://localhost:3000/dogs";
+                      url = `${process.env.BACKEND_URL}/dogs`;
 
                       fetch(url, {
                         method: "GET",
@@ -227,7 +227,7 @@ const DogTable = () => {
                       const deleteAnimal = async () => {
                         try {
                           const response = await fetch(
-                            "http://localhost:3000/dogs/" + animal._id,
+                            `${process.env.BACKEND_URL}/dogs` + animal._id,
                             {
                               method: "DELETE",
                             }
@@ -239,7 +239,7 @@ const DogTable = () => {
 
                           const data = await response.json();
                           let url = "";
-                          url = "http://localhost:3000/dogs";
+                          url = `${process.env.BACKEND_URL}/dogs`;
 
                           fetch(url, {
                             method: "GET",

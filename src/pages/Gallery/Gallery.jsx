@@ -38,11 +38,11 @@ const Gallery = () => {
   useEffect(() => {
     let url = "";
     if (animalType === "dogs") {
-      url = "http://localhost:3000/dogs";
+      url = `${process.env.BACKEND_URL}/dogs`;
     } else if (animalType === "cats") {
-      url = "http://localhost:3000/cats";
+      url = `${process.env.BACKEND_URL}/cats`;
     } else if (animalType === "birds") {
-      url = "http://localhost:3000/birds";
+      url = `${process.env.BACKEND_URL}/birds`;
     }
 
     if (searchValue) {

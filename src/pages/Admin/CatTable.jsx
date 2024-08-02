@@ -21,7 +21,7 @@ const CatTable = () => {
   }, [openModal]);
 
   useEffect(() => {
-    let url = "http://localhost:3000/cats";
+    let url = `${process.env.BACKEND_URL}/cats`;
 
     fetch(url, {
       method: "GET",
@@ -102,7 +102,7 @@ const CatTable = () => {
                   const createAnimal = async () => {
                     try {
                       const response = await fetch(
-                        "http://localhost:3000/cats",
+                        `${process.env.BACKEND_URL}/cats`,
                         {
                           method: "POST",
                           headers: {
@@ -117,7 +117,7 @@ const CatTable = () => {
                       }
 
                       const data = await response.json();
-                      let url = "http://localhost:3000/cats";
+                      let url = `${process.env.BACKEND_URL}/cats`;
 
                       fetch(url, {
                         method: "GET",
@@ -144,7 +144,7 @@ const CatTable = () => {
                       }
 
                       const data = await response.json();
-                      let url = "http://localhost:3000/cats";
+                      let url = `${process.env.BACKEND_URL}/cats`;
 
                       fetch(url, {
                         method: "GET",
@@ -201,7 +201,7 @@ const CatTable = () => {
                       const deleteAnimal = async () => {
                         try {
                           const response = await fetch(
-                            "http://localhost:3000/cats/" + animal._id,
+                           `${process.env.BACKEND_URL}/cats` + animal._id,
                             {
                               method: "DELETE",
                             }
@@ -212,7 +212,7 @@ const CatTable = () => {
                           }
 
                           const data = await response.json();
-                          let url = "http://localhost:3000/cats";
+                          let url = `${process.env.BACKEND_URL}/cats`;
 
                           fetch(url, {
                             method: "GET",
