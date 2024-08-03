@@ -69,7 +69,7 @@ const Navbar = () => {
         >
           Gallery
         </li>
-        <li
+        {/* <li
           onClick={() => {
             setMenu("admin");
             navigate("/administrator");
@@ -77,7 +77,7 @@ const Navbar = () => {
           className={menu === "admin" ? "active" : ""}
         >
           Admin
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
