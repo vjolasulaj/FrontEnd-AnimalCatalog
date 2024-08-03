@@ -21,7 +21,7 @@ const CatTable = () => {
   }, [openModal]);
 
   useEffect(() => {
-    let url = import.meta.env.VITE_BACKEND_URL/cats;
+    let url = `${import.meta.env.VITE_BACKEND_URL}/cats`;
 
     fetch(url, {
       method: "GET",
@@ -102,7 +102,7 @@ const CatTable = () => {
                   const createAnimal = async () => {
                     try {
                       const response = await fetch(
-                        import.meta.env.VITE_BACKEND_URL/cats,
+                        `${import.meta.env.VITE_BACKEND_URL}/cats`,
                         {
                           method: "POST",
                           headers: {
@@ -117,7 +117,7 @@ const CatTable = () => {
                       }
 
                       const data = await response.json();
-                      let url = import.meta.env.VITE_BACKEND_URL/cats;
+                      let url = `${import.meta.env.VITE_BACKEND_URL}/cats`;
 
                       fetch(url, {
                         method: "GET",
@@ -129,7 +129,7 @@ const CatTable = () => {
                   const updateAnimal = async () => {
                     try {
                       const response = await fetch(
-                        import.meta.env.VITE_BACKEND_URL/cats + selectedId,
+                        `${import.meta.env.VITE_BACKEND_URL}/cats` + selectedId,
                         {
                           method: "PATCH",
                           headers: {
@@ -144,7 +144,7 @@ const CatTable = () => {
                       }
 
                       const data = await response.json();
-                      let url = import.meta.env.VITE_BACKEND_URL/cats;
+                      let url = `${import.meta.env.VITE_BACKEND_URL}/cats`;
 
                       fetch(url, {
                         method: "GET",
@@ -201,7 +201,7 @@ const CatTable = () => {
                       const deleteAnimal = async () => {
                         try {
                           const response = await fetch(
-                           import.meta.env.VITE_BACKEND_URL/cats + animal._id,
+                           `${import.meta.env.VITE_BACKEND_URL}/cats` + animal._id,
                             {
                               method: "DELETE",
                             }
@@ -212,7 +212,7 @@ const CatTable = () => {
                           }
 
                           const data = await response.json();
-                          let url = import.meta.env.VITE_BACKEND_URL/cats;
+                          let url = `${import.meta.env.VITE_BACKEND_URL}/cats`;
 
                           fetch(url, {
                             method: "GET",

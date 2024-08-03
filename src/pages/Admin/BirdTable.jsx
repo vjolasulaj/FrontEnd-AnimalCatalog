@@ -21,7 +21,7 @@ const BirdTable = () => {
   }, [openModal]);
 
   useEffect(() => {
-    let url = import.meta.env.VITE_BACKEND_URL/birds;
+    let url = `${import.meta.env.VITE_BACKEND_URL}/birds`;
 
     fetch(url, {
       method: "GET",
@@ -135,7 +135,7 @@ const BirdTable = () => {
                   const createAnimal = async () => {
                     try {
                       const response = await fetch(
-                        import.meta.env.VITE_BACKEND_URL/birds,
+                        `${import.meta.env.VITE_BACKEND_URL}/birds`,
                         {
                           method: "POST",
                           headers: {
@@ -150,7 +150,7 @@ const BirdTable = () => {
                       }
 
                       const data = await response.json();
-                      let url = import.meta.env.VITE_BACKEND_URL/birds;
+                      let url = `${import.meta.env.VITE_BACKEND_URL}/birds`;
 
                       fetch(url, {
                         method: "GET",
@@ -162,7 +162,7 @@ const BirdTable = () => {
                   const updateAnimal = async () => {
                     try {
                       const response = await fetch(
-                        import.meta.env.VITE_BACKEND_URL/birds + selectedId,
+                        `${import.meta.env.VITE_BACKEND_URL}/birds` + selectedId,
                         {
                           method: "PATCH",
                           headers: {
@@ -177,7 +177,7 @@ const BirdTable = () => {
                       }
 
                       const data = await response.json();
-                      let url = import.meta.env.VITE_BACKEND_URL/birds;
+                      let url = `${import.meta.env.VITE_BACKEND_URL}/birds`;
 
                       fetch(url, {
                         method: "GET",
@@ -234,7 +234,7 @@ const BirdTable = () => {
                       const deleteAnimal = async () => {
                         try {
                           const response = await fetch(
-                            import.meta.env.VITE_BACKEND_URL/birds + animal._id,
+                            `${import.meta.env.VITE_BACKEND_URL}/birds` + animal._id,
                             {
                               method: "DELETE",
                             }
@@ -245,7 +245,7 @@ const BirdTable = () => {
                           }
 
                           const data = await response.json();
-                          let url = import.meta.env.VITE_BACKEND_URL/birds;
+                          let url = `${import.meta.env.VITE_BACKEND_URL}/birds`;
 
                           fetch(url, {
                             method: "GET",

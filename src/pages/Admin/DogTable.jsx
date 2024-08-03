@@ -21,7 +21,7 @@ const DogTable = () => {
   }, [openModal]);
 
   useEffect(() => {
-    let url = import.meta.env.VITE_BACKEND_URL / dogs;
+    let url = `${import.meta.env.VITE_BACKEND_URL}/dogs`;
 
     fetch(url, {
       method: "GET",
@@ -126,7 +126,7 @@ const DogTable = () => {
                   const createAnimal = async () => {
                     try {
                       const response = await fetch(
-                        import.meta.env.VITE_BACKEND_URL / dogs,
+                        `${import.meta.env.VITE_BACKEND_URL}/dogs`,
                         {
                           method: "POST",
                           headers: {
@@ -142,7 +142,7 @@ const DogTable = () => {
 
                       const data = await response.json();
                       let url = "";
-                      url = import.meta.env.VITE_BACKEND_URL / dogs;
+                      url = `${import.meta.env.VITE_BACKEND_URL}/dogs`;
 
                       fetch(url, {
                         method: "GET",
@@ -154,7 +154,7 @@ const DogTable = () => {
                   const updateAnimal = async () => {
                     try {
                       const response = await fetch(
-                        import.meta.env.VITE_BACKEND_URL / dogs + selectedId,
+                        `${import.meta.env.VITE_BACKEND_URL}/dogs` + selectedId,
                         {
                           method: "PATCH",
                           headers: {
@@ -170,7 +170,7 @@ const DogTable = () => {
 
                       const data = await response.json();
                       let url = "";
-                      url = import.meta.env.VITE_BACKEND_URL / dogs;
+                      url = `${import.meta.env.VITE_BACKEND_URL}/dogs`;
 
                       fetch(url, {
                         method: "GET",
@@ -227,7 +227,7 @@ const DogTable = () => {
                       const deleteAnimal = async () => {
                         try {
                           const response = await fetch(
-                            import.meta.env.VITE_BACKEND_URL / dogs + animal._id,
+                            `${import.meta.env.VITE_BACKEND_URL}/dogs` + animal._id,
                             {
                               method: "DELETE",
                             }
@@ -239,7 +239,7 @@ const DogTable = () => {
 
                           const data = await response.json();
                           let url = "";
-                          url = import.meta.env.VITE_BACKEND_URL / dogs;
+                          url = `${import.meta.env.VITE_BACKEND_URL}/dogs`;
 
                           fetch(url, {
                             method: "GET",
