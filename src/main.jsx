@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/gallery",
+    path: "/",
     element: <Root />,
     loader:rootLoader,
   },
