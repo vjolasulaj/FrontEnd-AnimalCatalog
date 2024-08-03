@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Gallery from "./pages/Gallery/Gallery";
 import Admin from "./pages/Admin/Admin";
-import DogTable from "./pages/Admin/DogTable";
 
 const App = () => {
   return (
